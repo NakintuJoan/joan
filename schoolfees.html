@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shilo Nile Star Nursery & Primary School</title>
+    <link rel="icon" href="assets/wallpaper-1.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+          /* Section Header with Background Image */
+        .section-header {
+            background: url('assets/wallpaper-1.jpg') no-repeat center center / cover;
+            padding: 150px 0;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* Overlay with 50% opacity */
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+
+        /* Two-column layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 150px;
+            margin-bottom: 3px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+        }
+        .background-overlay {
+          background: url('assets/wallpaper-7.jpg') no-repeat center center / cover;
+          position: relative;
+        }
+        .background-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 128, 0, 0.7); /* Green overlay */
+            z-index: 1;
+        }
+        .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    }
+
+    .whatsapp-icon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-icon img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+        h2, h4 {
+            color: orange;
+            font-weight: bold;
+        }
+        .fees-table {
+            border: 1px solid #dee2e6;
+            background-color: #ffffff;
+        }
+        .fees-table th {
+            background-color: #f1f3f5;
+            font-weight: bold;
+        }
+        .fees-table td, .fees-table th {
+            padding: 12px;
+            text-align: left;
+        }
+        .fees-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .list-group-item {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 10px 15px;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-style: italic;
+        }
+        .payment-section{
+            justify-content: center;
+            align-items: center;
+        }
+        .payment-section ul {
+            margin-left: 1rem;
+        }
+        .payment-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight {
+            background-color: #d1ecf1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+  <section id="topHeader" class="header navbar navbar-expand-lg shadow-sm sticky-top" style="position: fixed; top: 0; width: 100%; z-index: 1030; background: rgba(0, 128, 0, 0.9); padding: 5px; padding-left: 5px;">
+    <div class="header navbar navbar-expand-lg shadow-sm sticky-top">
+      <div class="container-fluid">
+        <!-- Top Row -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <!-- Contact Info -->
+          <div class="d-flex flex-column text-center text-md-start mb-2 mb-md-0">
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>shilo@shilonilestar.com</span>
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>P.O.Box 1838</span>
+            <span class="d-block"><i class="bi bi-telephone-fill me-1"></i> 0394813636 / 0772423201</span>
+          </div>
+        </div>
+        <!-- Links Row -->
+        <div class="d-lg-flex justify-content-center mt-3">
+          <ul class="list-inline mb-0 text-center text-lg-start">
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Administration</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Circular</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Fees</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Apply Online</a></li>
+          </ul>
+        </div>
+         <!-- Social Media Icons -->
+         <div class=" align-items-center mt-2 mt-md-0" style="color: white; font-size: 17px;">
+            <a href="#" class="me-3"><i class="bi bi-envelope-check-fill" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-person-circle" style="color: white;"></i></a>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow ml-3 mr-3" style="position: fixed; top: 72px; width: 100%; z-index: 1050; background: white; transition: background-color 0.3s, box-shadow 0.3s;">
+  <div class="container">
+    <img src="assets/download (1).jpeg" alt="" style="height: 60px; width: 60px;">
+    <a class="navbar-brand" href="#" style="font-weight: bold;">Shilo Nile Star <br> Nursery & Primary School</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="aboutus.html">Our School</a></li>
+            <li><a class="dropdown-item" href="headteacher.html">Head Teacher's Message</a></li>
+            <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="headofdepartments.html">Head Of Departments</a></li>
+            <li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
+            <li><a class="dropdown-item" href="schoolanthem.html">School Anthem</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admissions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="applyonline.html">Apply Online</a></li>
+            <li><a class="dropdown-item" href="schoolfees.html">School Fees</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="schooluniform.html">School Uniform</a></li>
+            <li><a class="dropdown-item" href="eventscalendar.html">Events Calender</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Academics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="nursery.html">Nursery</a></li>
+            <li><a class="dropdown-item" href="primary.html">Primary</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="schoolcircular.html">School Circular</a></li>
+            <li><a class="dropdown-item" href="#">Holiday Work</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="notices.html">Notices</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Students
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">School Life</a></li>
+            <li><a class="dropdown-item" href="#">Our Facilities</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Photo Gallery</a></li>
+            <li><a class="dropdown-item" href="#">Prefects</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Contact Us</a>
+        </li>
+      </ul>
+      <a href="applyonline.html" class="btn btn-m m-2 ml-5 ms-3" style="background-color: orange; color: white;">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/256755087665?text=Hello!" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <section id="aboutUs" class="about-us">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">School Fees</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class=" col-12 col-md-6 align-items-center" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+          <h3 style="color: orange; font-weight: bold; font-size: 40px;">OUR SCHOOL FEES STRUCTURE</h3>
+          <p style="line-height: 1.7; color: green; font-weight: bold;">AND ADDITIONAL REQUIREMENTS FOR NEW ENTRANTS</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="1000">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: orange; font-weight: bold;">A. General Fees</h5>
+                    <table class="table fees-table">
+                        <thead>
+                            <tr>
+                                <th>Fee Type</th>
+                                <th>Amount (UGX)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Admission Fee</td><td>50,000/=</td></tr>
+                            <tr><td>Development Fee</td><td>100,000/=</td></tr>
+                            <tr><td>Library Contribution</td><td>50,000/=</td></tr>
+                            <tr><td>Brass Band</td><td>20,000/=</td></tr>
+                        </tbody>
+                    </table>        
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: orange; font-weight: bold;">B. Tuition Fees</h5>
+                    <table class="table table-striped table-hover fees-table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Boarding (UGX)</th>
+                                <th>Day (UGX)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Nursery</td><td>1,057,000/=</td><td>667,000/=</td></tr>
+                            <tr><td>P.1 P.2 P.3 P.4 P.5</td><td>1,107,000/=</td><td>717,000/=</td></tr>
+                            <tr><td>P.6 and P.7</td><td>1,025,000/=</td><td>667,000/=</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <!-- Uniform Fees -->
+            <div class="mb-5" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
+                <h4>C. School Uniform Fees</h4>
+                <table class="table table-striped table-hover fees-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Amount (UGX)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Labeling Fee (Uniforms Only)</td><td>17,000/=</td></tr>
+                        <tr><td>Shirt/Blouse (O-Level)</td><td>30,000/=</td></tr>
+                        <tr><td>Shirt/Blouse (A-Level)</td><td>32,000/=</td></tr>
+                        <tr><td>Trouser</td><td>42,000/=</td></tr>
+                        <tr><td>Skirt</td><td>30,000/=</td></tr>
+                        <tr><td>T-shirt</td><td>25,000/=</td></tr>
+                        <tr><td>Sweater</td><td>40,000/=</td></tr>
+                        <tr><td>Special Sweater (Asthma)</td><td>60,000/=</td></tr>
+                        <tr><td>Tie</td><td>8,000/=</td></tr>
+                        <tr><td>Sabbath Shirt/Blouse</td><td>35,000/=</td></tr>
+                        <tr><td>Sportswear (Short)</td><td>30,000/=</td></tr>
+                        <tr><td>Scarf</td><td>15,000/=</td></tr>
+                    </tbody>
+                </table>
+                <p class="note">* Boarding students must have two sets of uniforms.</p>
+            </div>
+    
+            <!-- Other Requirements -->
+            <div class="mb-5" style="justify-content: center;" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
+                <h4>D. Other Requirements</h4>
+                <ul class="list-group justify-content-center">
+                    <li class="list-group-item">Student ID and Photos: 8,000/=</li>
+                    <li class="list-group-item">Parents Visiting Card: 7,000/=</li>
+                    <li class="list-group-item">Ream of Papers (Don't carry papers): 30,000/=</li>
+                    <li class="list-group-item">Salon Service: 7,000/=</li>
+                    <li class="list-group-item">Bible: 40,000/=</li>
+                    <li class="list-group-item">Hymn Book: 17,000/=</li>
+                </ul>
+            </div>
+    
+            <!-- Payment Instructions -->
+            <div class=" container-fluid payment-section mb-5" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
+                <h4>F. How to Make Payments</h4>
+                <div class="highlight">
+                    <strong>Bank Payment:</strong>
+                    <ul>
+                        <li>Stanbic Bank A/C No: <strong>9030005844648</strong> (Nakasero Branch)</li>
+                        <li>Pay at any nearest Stanbic Bank branch or agent.</li>
+                        <li>Quote the Student's Name</li>
+                        <li>Pay Cash to the Bank Teller or Agent</li>
+                        <li>You will get a Payment Receipt confirming your fees payment (School Name, Student Name, School Fees Amount, Charges)</li>
+                        <li>Cash payments at school attract a risk fee of shs. 30,000=</li>
+                        <li>Money order or bank drafts drawn in the names of the school are acceptable</li>
+                        <li>Personal cheques are only acceptable upon the Headteacher’s permission</li>
+                    </ul>
+                </div>
+                <div class="highlight mt-3" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
+                    <strong>Mobile Money Payment:</strong>
+                    <ul>
+                        <li>MTN Momo: Dial <code>*165*4*3*2*1#</code></li>
+                        <li>Airtel Money: Dial <code>*185*6*2*1#</code></li>
+                        <li>Enter Student Code and Confirm Payment Details.</li>
+                        <li>Enter the Student Code. For example: 1003211569</li>
+                        <li>Enter the School Fees Amount to Pay to the School.</li>
+                        <li>Confirm Details of Payment displayed to you. (School name, Student name, School fees amount, charges).</li>
+                        <li>Continue to authorize transaction</li>
+                        <li>Enter your Mobile Money PIN.</li>
+                        <li>Approve Payment.</li>
+                        <li>You will Receive a Message with all your Payment Details.</li>
+                    </ul>
+                </div>
+            </div>
+            <footer style="text-align: center; font-size: 0.85rem; color: green; font-weight: bold; margin-top: 30px; padding: 20px; background-color: #e9ecef;">* All fees are subject to change without notice. Contact the school for up-to-date information.</footer>  
+        </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(assets/wallpaper-1.jpg) no-repeat center center / cover;">
+    <div class="container" style="line-height: 30px;">
+        <div class="row align-items-center" >
+            <!-- Location Details Column -->
+             <img src="assets/download (1).jpeg" alt="" style="height: 150px; width: 250px;" class="zoom-in ">
+            <div class="col-md-3 text-center">
+                <h5 style="font-weight: bold;">Location</h5>
+                <p class="text-white" style="font-size: 15px;">123 School Avenue, Education City, Country</p>
+                <p class="text-white" style="font-size: 15px;">Phone: 0394813636 / 0772423201</p>
+                <p class="text-white" style="font-size: 15px;">Email: shilo@shilonilestar.com</p>
+                <ul class="list-inline" style="font-size: 70px;">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-facebook" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-twitter-x" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-instagram" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li class="list-inline-item">
+                    <a href="#" class="text-white social-icon" style="font-size: 15px;"><i class="bi bi-envelope-check-fill" style="color: white; font-size: 24px;""></i></a>
+                </ul>
+            </div>
+            <!-- Useful Links Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Useful Links</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Apply Online</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Fees</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Uniform</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">News And Updates</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Events Calender</a></li>
+                </ul>
+            </div>
+
+            <!-- Academics Information Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Academics</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Nursery</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Primary</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Circular</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Hoilday Work</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Alumni</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Administration</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="text-center" style="background-color: orange; padding: 15px; font-weight: bold; color: white;">
+    <p>&copy; 2024 Lakeside School. All rights reserved.</p>
+</div>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    
+  </footer>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/
+  
+    
+</body>
+</html>

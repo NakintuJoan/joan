@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shilo Nile Star Nursery & Primary School</title>
+    <link rel="icon" href="assets/wallpaper-1.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+          /* Section Header with Background Image */
+        .section-header {
+            background: url('assets/wallpaper-8.jpg') no-repeat center center / cover;
+            padding: 150px 0;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Overlay with 50% opacity */
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+
+        /* Two-column layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 150px;
+            margin-bottom: 3px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+        }
+        .background-overlay {
+          background: url('assets/download (1).jpeg') no-repeat center center / cover;
+          position: relative;
+        }
+        .background-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 128, 0, 0.6); /* Green overlay */
+            z-index: 1;
+        }
+        .card-title{
+            color: orange;
+            font-weight: bold;
+        }
+        .card-text{
+            color: green;
+        }
+        .anthem-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .anthem-intro {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .anthem-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .anthem-lyrics {
+            font-size: 1.2rem;
+            color: green;
+            line-height: 1.8;
+        }
+
+        .anthem-button {
+            background-color: orange;
+            color: #fff;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .anthem-button:hover {
+            background-color: green;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .card {
+            border: 1px solid #28a745;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-body {
+            background-color: #fffaf0;
+        }
+
+        .btn-orange {
+            background-color: orange;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background-color: green;
+        }
+        
+        .primary-section {
+            color: green;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .primary-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: orange;
+            font-weight: bold;
+        }
+
+        .primary-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+
+        .primary-section .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: orange;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .primary-section .btn:hover {
+            background-color: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+
+        /* Gallery Section */
+        .picture-gallery {
+            padding: 40px 20px;
+            background-color: #fdf9e6;
+            text-align: center;
+        }
+
+        .picture-gallery h2 {
+            color: #ff9800;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px #4caf50;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #ff9800;
+        }
+
+        .subjects-section {
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .subjects-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .subjects-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2rem;
+        }
+
+        .subjects-list li {
+            padding: 10px 15px;
+            background-color: #4caf50;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .subjects-list li:hover {
+            background-color: white;
+            color: #4caf50;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        /* Achievements Section */
+        .achievements-section h2 {
+            color: #4caf50;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .achievements-section ul {
+            list-style: square;
+            margin: 0 0 0 20px;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Learning Activities Section */
+        .learning-activities-section h2 {
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .learning-activities-section p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+            padding: 0 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        /* Slider Controls */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .slider-controls button {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .slider-controls button:hover {
+            background-color: #ff9800;
+        }
+
+    </style>
+</head>
+<body >
+  <section id="topHeader" class="header navbar navbar-expand-lg shadow-sm sticky-top" style="position: fixed; top: 0; width: 100%; z-index: 1030; background: rgba(0, 128, 0, 0.9); padding: 5px; padding-left: 5px;">
+    <div class="header navbar navbar-expand-lg shadow-sm sticky-top">
+      <div class="container-fluid">
+        <!-- Top Row -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <!-- Contact Info -->
+          <div class="d-flex flex-column text-center text-md-start mb-2 mb-md-0">
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>shilo@shilonilestar.com</span>
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>P.O.Box 1838</span>
+            <span class="d-block"><i class="bi bi-telephone-fill me-1"></i> 0394813636 / 0772423201</span>
+          </div>
+        </div>
+        <!-- Links Row -->
+        <div class="d-lg-flex justify-content-center mt-3">
+          <ul class="list-inline mb-0 text-center text-lg-start">
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Administration</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Circular</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Fees</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Apply Online</a></li>
+          </ul>
+        </div>
+         <!-- Social Media Icons -->
+         <div class=" align-items-center mt-2 mt-md-0" style="color: white; font-size: 17px;">
+            <a href="#" class="me-3"><i class="bi bi-envelope-check-fill" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-person-circle" style="color: white;"></i></a>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow ml-3 mr-3" style="position: fixed; top: 72px; width: 100%; z-index: 1050; background: white; transition: background-color 0.3s, box-shadow 0.3s;">
+    <div class="container">
+      <img src="assets/download (1).jpeg" alt="" style="height: 60px; width: 60px;">
+      <a class="navbar-brand" href="#" style="font-weight: bold;">Shilo Nile Star <br> Nursery & Primary School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="aboutus.html">Our School</a></li>
+              <li><a class="dropdown-item" href="headteacher.html">Head Teacher's Message</a></li>
+              <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="headofdepartments.html">Head Of Departments</a></li>
+              <li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
+              <li><a class="dropdown-item" href="schoolanthem.html">School Anthem</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admissions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="applyonline.html">Apply Online</a></li>
+              <li><a class="dropdown-item" href="schoolfees.html">School Fees</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="schooluniform.html">School Uniform</a></li>
+              <li><a class="dropdown-item" href="eventscalendar.html">Events Calender</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Academics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="nursery.html">Nursery</a></li>
+              <li><a class="dropdown-item" href="primary.html">Primary</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="schoolcircular.html">School Circular</a></li>
+              <li><a class="dropdown-item" href="#">Holiday Work</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notices.html">Notices</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Students
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">School Life</a></li>
+              <li><a class="dropdown-item" href="#">Our Facilities</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Photo Gallery</a></li>
+              <li><a class="dropdown-item" href="#">Prefects</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Contact Us</a>
+          </li>
+        </ul>
+        <a href="applyonline.html" class="btn btn-m m-2 ml-5 ms-3" style="background-color: orange; color: white;">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/256755087665?text=Hello!" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <section id="aboutUs" class="about-us" >
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">Primary Section</h2>
+    </div>
+    <div class="container" style="background-color: #ffffff; border-radius: 8px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);padding: 30px;">
+        <!-- Primary Section -->
+    <div class="primary-section" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+        <h1>Welcome to Our School Primary Section</h1>
+        <p>
+            Discover a vibrant learning environment where students grow academically, socially, and creatively.
+            Join us in shaping the future with excellence and passion.
+        </p>
+        <a href="#gallery" class="btn">Explore More About this Section</a>
+    </div>
+
+    <!-- Subjects Section -->
+    <div class="subjects-section" style="margin-top: 20px;" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+        <h2 style="color: orange; font-weight: bold;">Subjects Offered in Primary Section</h2>
+        <ul class="subjects-list">
+            <li>Mathematics</li>
+            <li>English Language</li>
+            <li>Science</li>
+            <li>Social Studies</li>
+            <li>Physical Education</li>
+            <li>Art and Craft</li>
+            <li>Music</li>
+            <li>Computer Studies</li>
+        </ul>
+    </div>
+
+    <!-- Picture Gallery -->
+    <div class="picture-gallery" id="gallery" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+        <h2>Our Primary In Learning Activities</h2>
+        <p style="color: green; font-weight: bold;"> Watch our students in action as they engage in hands-on learning and creative exploration:</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/wallpaper-1.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/wallpaper-2.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/wallpaper-3.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/wallpaper-4.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/wallpaper-5.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/wallpaper-6.jpg" alt="">
+            </div>
+        </div> 
+    </div>    
+    <!-- Testimonials Slider -->
+    <div class="testimonials-section" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;" data-aos="zoom-out-up" data-aos-delay="200" data-aos-duration="1000">
+        <h2 style="color: orange; font-weight: bold; text-align: center; text-shadow: 2px 2px #4caf50;">Testimonials</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <img src="assets/wallpaper-1.jpg" alt="Grade 4 Student" class="testimonial-image">
+                <p class="testimonial-text">
+                    <em>"This school has transformed my child's academic journey. The teachers are exceptional, and the environment is nurturing."</em>
+                </p>
+                <p class="testimonial-author">– Parent of a Grade 4 student</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="assets/wallpaper-2.jpg" alt="Grade 2 Student" class="testimonial-image">
+                <p class="testimonial-text">
+                    <em>"I love coming to school every day because it’s fun and I learn so much!"</em>
+                </p>
+                <p class="testimonial-author">– Grade 2 student</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="assets/wallpaper-3.jpg" alt="Grade 6 Student" class="testimonial-image">
+                <p class="testimonial-text">
+                    <em>"The school's focus on holistic development is commendable. My child excels in both academics and extracurricular activities."</em>
+                </p>
+                <p class="testimonial-author">– Parent of a Grade 6 student</p>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-btn">←</button>
+            <button class="next-btn">→</button>
+        </div>
+    </div>
+
+    <!-- Enrollment Information Section -->
+    <div class="section-title" style=" color: orange;margin-top: 20px;font-size: 1.8rem;padding-bottom: 10px;">
+        <h2 style="color: orange; font-weight: bold;" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">Enrollment Information</h2>
+    </div>
+    <div class="content" style="color: green; font-weight: bold;" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+        <p>To enroll your child in our primary section, please complete the enrollment form on our website or visit the school's office. Our team will be happy to guide you through the process and answer any questions you may have.</p>
+        <a href="applyonline.html" class="btn" style="background-color: orange; color: white;">Learn More & Enroll</a>
+    </div>
+    </div>
+  </section>
+  <br>
+
+
+
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(assets/download\ \(1\).jpeg) no-repeat center center / cover;">
+    <div class="container" style="line-height: 30px;">
+        <div class="row align-items-center" >
+            <!-- Location Details Column -->
+             <img src="assets/download (1).jpeg" alt="" style="height: 150px; width: 250px;" class="zoom-in ">
+            <div class="col-md-3 text-center">
+                <h5 style="font-weight: bold;">Location</h5>
+                <p class="text-white" style="font-size: 15px;">123 School Avenue, Education City, Country</p>
+                <p class="text-white" style="font-size: 15px;">Phone: 0394813636 / 0772423201</p>
+                <p class="text-white" style="font-size: 15px;">Email: shilo@shilonilestar.com</p>
+                <ul class="list-inline" style="font-size: 70px;">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-facebook" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-twitter-x" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-instagram" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li class="list-inline-item">
+                    <a href="#" class="text-white social-icon" style="font-size: 15px;"><i class="bi bi-envelope-check-fill" style="color: white; font-size: 24px;"></i></a>
+                </ul>
+            </div>
+            <!-- Useful Links Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Useful Links</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Apply Online</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Fees</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Uniform</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">News And Updates</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Events Calender</a></li>
+                </ul>
+            </div>
+
+            <!-- Academics Information Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Academics</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Nursery</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Primary</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Circular</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Hoilday Work</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Alumni</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Administration</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="text-center" style="background-color: orange; padding: 15px; font-weight: bold; color: white;">
+    <p>&copy; 2024 Lakeside School. All rights reserved.</p>
+</div>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    
+  </footer>
+  <script>
+            // JavaScript for Testimonials Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const offset = -index * 100;
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(${offset}%)`;
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        });
+
+        // Initialize the slider
+        showSlide(currentIndex);
+
+  </script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/
+  
+    
+</body>
+</html>

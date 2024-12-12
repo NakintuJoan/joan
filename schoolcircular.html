@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shilo Nile Star Nursery & Primary School</title>
+    <link rel="icon" href="assets/wallpaper-1.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+          /* Section Header with Background Image */
+        .section-header {
+            background: url('assets/download (1).jpeg') no-repeat center center / cover;
+            padding: 150px 0;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Overlay with 50% opacity */
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+
+        /* Two-column layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 150px;
+            margin-bottom: 3px;
+            color: white;
+            z-index: 2; /* Ensure text is above overlay */
+            position: relative;
+        }
+        }
+        .background-overlay {
+          background: url('assets/download (1).jpeg') no-repeat center center / cover;
+          position: relative;
+        }
+        .background-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 128, 0, 0.6); /* Green overlay */
+            z-index: 1;
+        }
+        .card-title{
+            color: orange;
+            font-weight: bold;
+        }
+        .card-text{
+            color: green;
+        }
+        h1, h2, h3, h4 {
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        h2, h3 {
+            color: #ff9800;
+        }
+
+        table th, table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+             
+
+    </style>
+</head>
+<body>
+  <section id="topHeader" class="header navbar navbar-expand-lg shadow-sm sticky-top" style="position: fixed; top: 0; width: 100%; z-index: 1030; background: rgba(0, 128, 0, 0.9); padding: 5px; padding-left: 5px;">
+    <div class="header navbar navbar-expand-lg shadow-sm sticky-top">
+      <div class="container-fluid">
+        <!-- Top Row -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <!-- Contact Info -->
+          <div class="d-flex flex-column text-center text-md-start mb-2 mb-md-0">
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>shilo@shilonilestar.com</span>
+            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>P.O.Box 1838</span>
+            <span class="d-block"><i class="bi bi-telephone-fill me-1"></i> 0394813636 / 0772423201</span>
+          </div>
+        </div>
+        <!-- Links Row -->
+        <div class="d-lg-flex justify-content-center mt-3">
+          <ul class="list-inline mb-0 text-center text-lg-start">
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Administration</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Circular</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Fees</a></li>
+            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Apply Online</a></li>
+          </ul>
+        </div>
+         <!-- Social Media Icons -->
+         <div class=" align-items-center mt-2 mt-md-0" style="color: white; font-size: 17px;">
+            <a href="#" class="me-3"><i class="bi bi-envelope-check-fill" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook" style="color: white;"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-person-circle" style="color: white;"></i></a>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow ml-3 mr-3" style="position: fixed; top: 72px; width: 100%; z-index: 1050; background: white; transition: background-color 0.3s, box-shadow 0.3s;">
+  <div class="container">
+    <img src="assets/download (1).jpeg" alt="" style="height: 60px; width: 60px;">
+    <a class="navbar-brand" href="#" style="font-weight: bold;">Shilo Nile Star <br> Nursery & Primary School</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="aboutus.html">Our School</a></li>
+            <li><a class="dropdown-item" href="headteacher.html">Head Teacher's Message</a></li>
+            <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="headofdepartments.html">Head Of Departments</a></li>
+            <li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
+            <li><a class="dropdown-item" href="schoolanthem.html">School Anthem</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admissions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="applyonline.html">Apply Online</a></li>
+            <li><a class="dropdown-item" href="schoolfees.html">School Fees</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="schooluniform.html">School Uniform</a></li>
+            <li><a class="dropdown-item" href="eventscalendar.html">Events Calender</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Academics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="nursery.html">Nursery</a></li>
+            <li><a class="dropdown-item" href="primary.html">Primary</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="schoolcircular.html">School Circular</a></li>
+            <li><a class="dropdown-item" href="#">Holiday Work</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="notices.html">Notices</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Students
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">School Life</a></li>
+            <li><a class="dropdown-item" href="#">Our Facilities</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Photo Gallery</a></li>
+            <li><a class="dropdown-item" href="#">Prefects</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Contact Us</a>
+        </li>
+      </ul>
+      <a href="applyonline.html" class="btn btn-m m-2 ml-5 ms-3" style="background-color: orange; color: white;">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/256755087665?text=Hello!" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <section id="aboutUs" class="about-us">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">School Circular</h2>
+    </div>
+    <div class="container my-5 p-4 rounded" style="background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+        <!-- Greetings -->
+        <section class="mb-4">
+            <h2 class="text-success">Dear Parent/Guardian,</h2>
+            <p>Greetings! Praise be to God Most High. Greetings from the family of Shilo Nile Star Nursery & Primary School.</p>
+        </section>
+
+        <!-- Appreciation -->
+        <section class="mb-4">
+            <h3 class="text-warning">Appreciation</h3>
+            <p>It is a singular honor to extend our sincere gratitude to you, dear Parent/Guardian, for the continued support towards the children. Thank you so much for sacrificing your resources, time, and energy. May the Lord Almighty reward you accordingly.</p>
+            <p>Today, Thursday, August 22, 2024, has marked the end of Term Two, 2024.</p>
+        </section>
+
+        <!-- Spiritual Matters -->
+        <section class="mb-4">
+            <h3 class="text-success">Spiritual Matters</h3>
+            <p>Prayers, counseling, and teaching the word of God have not missed on our daily spiritual menu as Lakeside College Luzira family. Our spiritual leaders, both internal and external, have done a commendable job.</p>
+        </section>
+
+        <!-- Academics -->
+        <section class="mb-4">
+            <h3 class="text-warning">Academics</h3>
+            <h4 class="text-success">PLE 2024</h4>
+            <p>We wish to report that Shilo Nile Star Nursery & Primary School registered candidates for the forthcoming National Examinations as stated below:</p>
+            <table class="table table-bordered">
+                <thead class="table-success">
+                    <tr>
+                        <th>Class</th>
+                        <th>Boys</th>
+                        <th>Girls</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P.7</td>
+                        <td>84</td>
+                        <td>86</td>
+                        <td>170</td>
+                    </tr>
+                    <tr class="fw-bold">
+                        <td>Total</td>
+                        <td>177</td>
+                        <td>188</td>
+                        <td>365</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Study Tours -->
+        <section class="mb-4">
+            <h3 class="text-success">Study Tours</h3>
+            <p>Thank you for sponsoring the children for the study tour to Western Kenya. It was educative and exciting. Below are the scheduled trips for next term:</p>
+            <table class="table table-bordered">
+                <thead class="table-warning">
+                    <tr>
+                        <th>Tour</th>
+                        <th>Fee</th>
+                        <th>Class(es)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CRE tour to Semuto, Kungu, Bahai Temple, Namugongo Shrine, Old Kampala Mosque</td>
+                        <td>Shs. 50,000</td>
+                        <td>S3 and S5</td>
+                    </tr>
+                    <tr>
+                        <td>Agriculture tour to Bukalasa, Kawanda</td>
+                        <td>Shs. 50,000</td>
+                        <td>S3 and S5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- School Fees -->
+        <section class="mb-4">
+            <h3 class="text-warning">School Fees Structure for Term 3, 2024</h3>
+            <p>Thank you for paying fees for your child. Our fees structure has not changed as shown below:</p>
+            <table class="table table-bordered">
+                <thead class="table-success">
+                    <tr>
+                        <th>Class</th>
+                        <th>Boarding</th>
+                        <th>Day</th>
+                        <th>Academic Facilitation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nursery</td>
+                        <td>1,057,000</td>
+                        <td>667,000</td>
+                        <td>–</td>
+                    </tr>
+                    <tr>
+                        <td>P.1, P.2, P.3, P.4, P.5</td>
+                        <td>1,107,000</td>
+                        <td>697,000</td>
+                        <td>–</td>
+                    </tr>
+                    <tr>
+                        <td>P.6 and P.7</td>
+                        <td>1,232,000</td>
+                        <td>1,232,000</td>
+                        <td>–</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Important Dates -->
+        <section class="mb-4">
+            <h3 class="text-success">Important Dates</h3>
+            <ul>
+                <li><strong>Opening of Term 3, 2024 for S4 and S6:</strong> Sunday, 08/09/2024</li>
+                <li><strong>Opening of Term 3, 2024 for S1, 2, 3 and 5:</strong> Sunday, 15/09/2024</li>
+                <li><strong>Independence Day Celebrations:</strong> Wednesday, 09/10/2024</li>
+                <li><strong>Visiting Day:</strong> Sunday, 03/11/2024</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+            <h3 class="text-warning">Conclusion</h3>
+            <p>Thank you once again for considering Lakeside College Luzira to be the number one choice for your children.</p>
+            <p class="text-end fw-bold" style="color: green;">Sentumbwe Fredrick (Mr.) <br> HEADTEACHER – 0704984307</p>
+        </section>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(assets/download\ \(1\).jpeg) no-repeat center center / cover;">
+    <div class="container" style="line-height: 30px;">
+        <div class="row align-items-center" >
+            <!-- Location Details Column -->
+             <img src="assets/download (1).jpeg" alt="" style="height: 150px; width: 250px;" class="zoom-in ">
+            <div class="col-md-3 text-center">
+                <h5 style="font-weight: bold;">Location</h5>
+                <p class="text-white" style="font-size: 15px;">123 School Avenue, Education City, Country</p>
+                <p class="text-white" style="font-size: 15px;">Phone: 0394813636 / 0772423201</p>
+                <p class="text-white" style="font-size: 15px;">Email: shilo@shilonilestar.com</p>
+                <ul class="list-inline" style="font-size: 70px;">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-facebook" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-twitter-x" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-white social-icon" style="font-size: 15px;">
+                            <i class="bi bi-instagram" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </li class="list-inline-item">
+                    <a href="#" class="text-white social-icon" style="font-size: 15px;"><i class="bi bi-envelope-check-fill" style="color: white; font-size: 24px;""></i></a>
+                </ul>
+            </div>
+            <!-- Useful Links Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Useful Links</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Apply Online</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Fees</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Uniform</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">News And Updates</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Events Calender</a></li>
+                </ul>
+            </div>
+
+            <!-- Academics Information Column -->
+            <div class="col-md-3 border-start text-center">
+                <h5 style="font-weight: bold;">Academics</h5>
+                <ul class="list-unstyled" style="font-size: 70px;">
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Nursery</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Primary</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">School Circular</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Hoilday Work</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Alumni</a></li>
+                    <li><a href="#" class="text-white"style="font-size: 15px;">Administration</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="text-center" style="background-color: orange; padding: 15px; font-weight: bold; color: white;">
+    <p>&copy; 2024 Lakeside School. All rights reserved.</p>
+</div>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    
+  </footer>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/
+  
+    
+</body>
+</html>

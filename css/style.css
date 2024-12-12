@@ -1,0 +1,661 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Baloo 2', sans-serif;
+    color: white; /* Bright and friendly color for headings */
+}
+
+  
+.hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    min-height: 60vh;
+}
+
+.features .col-md-4 i {
+    color:  orange;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.header{
+    color: white;
+    padding: 0.5px;
+    font-size: 14px;
+}
+.header i{
+    padding: 15px;
+}
+
+.header ul {
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.header ul li a {
+    transition: color 0.3s;
+}
+
+.header ul li a:hover {
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .header ul {
+        display: inline-block;
+    }
+    .header ul li a i{
+        text-align: center;
+    }
+    .header{
+        color: white;
+        padding: 0;
+        font-size: 14px;
+        margin-top: 0;
+    }
+}
+  
+
+/* Navbar Style */
+.navbar {
+    z-index: 1030; /* Ensures it stacks above other content */
+    position: relative; /* Ensures z-index is applied properly */
+}
+/* Dropdown Menu Styles */
+
+.dropdown-menu{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+}
+/* Dropdown Menu Visible State */
+.dropdown:hover .dropdown-menu {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+  /* Dropdown Item Styles */
+.dropdown-item {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333; /* Text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.dropdown-item:hover {
+    background-color: orange; /* Highlight color */
+    color: white; /* Text color on hover */
+}
+
+/* Divider Styles */
+.dropdown-divider {
+    border-top: 2px solid orange;
+    margin: 8px 0;
+}
+
+/* Ensure Toggler is Properly Aligned */
+.navbar-toggler {
+    margin: 0; /* Remove any unwanted margin */
+    padding: 0.25rem 0.5rem; /* Adjust padding for better fit */
+    float: right; /* Align toggler to the right */
+    border: none; /* Optional: Remove border if not needed */
+}
+
+/* Fix Extra Space on Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding-right: 0; /* Remove extra padding */
+        padding-left: 0; /* Remove extra padding */
+    }
+
+    .navbar-toggler {
+        float: none; /* Reset float */
+        display: block; /* Ensure proper alignment */
+    }
+
+    .container {
+        max-width: 100%; /* Prevent horizontal overflow */
+        padding: 0; /* Reset padding for container */
+    }
+}
+
+/* General Navbar Link Styling */
+.navbar-nav .nav-link {
+    color: green !important;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Remove the small gap */
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange !important;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+/* Navbar Background and Shadow on Scroll */
+#mainNavbar {
+    background-color: white;
+    box-shadow: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: fixed;
+    top: 72px; /* adjust based on your layout */
+    z-index: 1050; /* Ensure this is higher than other elements */
+}
+#mainNavbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.scrolled {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.zoom-in{
+    transition: transform 0.5s ease-in-out;
+}
+
+.zoom-in:hover{
+    transform: scale(1.1);
+}
+
+.rotate{
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate:hover{
+    transform: rotate();
+}
+
+/* Button styling */
+.btn-warning {
+    background-color: orange;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-m:hover {
+    background-color: darkorange;
+}
+
+/* Make sure the hero section takes up the full viewport height */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+    margin-top: 0; /* Ensure there's no unintended margin */
+}
+
+/* Ensure each carousel item fills the screen */
+.carousel-item {
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Each image will take up the full height of the viewport */
+    position: relative;
+}
+
+/* Add a black overlay with opacity using the ::before pseudo-element */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure it is behind the text */
+}
+
+
+/* Add custom styling for the carousel caption */
+.carousel-caption {
+    bottom: 20px;
+    top: auto;
+    text-align: left;
+    left: 10%;
+    z-index: 2; /* Make sure text appears above the overlay */
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.carousel-caption .btn {
+    font-size: 1rem;
+}
+.features img {
+    object-fit: cover;
+    border: 3px solid #f8f9fa; /* Border around the image */
+}
+.features h2 {
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+.features .card {
+    transition: transform 0.3s ease-in-out;
+}
+.features .card:hover {
+    transform: translateY(-10px); /* Adds a hover effect */
+}
+
+.upcoming-events .event-item {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.upcoming-events .event-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.upcoming-events .event-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.upcoming-events h5 {
+    font-size: 1.2rem;
+}
+
+.upcoming-events p {
+    font-size: 0.9rem;
+}
+
+.upcoming-events .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.25rem;
+}
+
+.background-overlay {
+    background: url('assets/download (1).jpeg') no-repeat center center / cover;
+    position: relative;
+}
+.background-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 128, 0, 0.2); /* Green overlay */
+    z-index: 1;
+}
+.content {
+    position: relative;
+    z-index: 2;
+}
+.navbar-links {
+    cursor: pointer;
+}
+
+
+@media (max-width: 400px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    .carousel-caption {
+        bottom: 20%;
+    }
+}
+/* Background Overlay */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent dark overlay */
+    padding: 50px 0;
+  }
+  
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border-radius: 12px; /* Rounded corners for the card */
+    overflow: hidden; /* Prevents the content from overflowing */
+  }
+  
+  .background-overlay {
+    background: url('assets/download (1).jpeg') no-repeat center center / cover;
+    position: relative;
+    padding: 80px 0;
+}
+.background-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 128, 0, 0.6); /* Green overlay */
+    z-index: 1;
+}
+.content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+.section-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.navbar-links {
+    cursor: pointer;
+    font-weight: bold;
+}
+.info-section {
+    margin-top: 30px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Center Play Button Icon */
+.video-container .bi-camera-video-fill {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: orange;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover .bi-camera-video-fill {
+    opacity: 1; /* Show play button on hover */
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+
+.news-section {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-title {
+    font-size: 19px;
+    font-weight: bold;
+    color: orange;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.news-description {
+    font-size: 13px;
+    color: green;
+    font-weight: bold;
+}
+
+.btn-more {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-more:hover {
+    background-color: green;
+    color: white;
+    transition: 1s ease-in-out;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Add custom styles if needed */
+footer .text-white {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.social-icon i {
+    transition: color 0.3s ease;
+    color: white;
+}
+.social-icon:hover i {
+    color: orange;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    #topHeader {
+        padding: 5px 5px;  /* Reduced padding */
+    }
+
+    #topHeader .d-flex {
+        flex-direction: column;  /* Stack the elements vertically on small screens */
+        align-items: center;  /* Center align the items */
+    }
+
+    #topHeader .list-inline {
+        padding: 0;  /* Remove extra padding around the links */
+        font-size: 14px;  /* Smaller font size for better readability */
+    }
+
+    #topHeader .list-inline-item {
+        margin-right: 5px;  /* Reduce the space between the links */
+    }
+
+    #topHeader .bi {
+        font-size: 20px;  /* Make icons smaller */
+    }
+    .header ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+/* Styles for medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #topHeader {
+        padding: 5px 10px;  /* Slightly larger padding for medium screens */
+    }
+
+    #topHeader .list-inline {
+        font-size: 15px;  /* Font size slightly larger */
+    }
+}
+ /* Media Query for Small Screens */
+ @media (max-width: 768px) {
+    #mainNavbar {
+        padding: 10px 10px; /* Increase padding */
+        margin-top: 120px;
+    }
+
+    .navbar-brand {
+        font-size: 13px; /* Make the navbar brand text slightly smaller */
+        height: 50%;
+        width: 50%;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Smaller font size for links */
+        padding: 10px 5px; /* Add padding to the links */
+    }
+
+    .navbar-toggler {
+        margin-right: 5px; /* Add margin to the right of the toggler */
+    }
+}
+
+/* Additional adjustments for even smaller screens (max-width: 576px) */
+@media (max-width: 576px) {
+    #mainNavbar {
+        padding: 20px 15px; /* Add more padding for ultra-small screens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 13px; /* Slightly larger font size for smaller screens */
+    }
+}
+
+
+ /* Style for the section */
+ .location-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Style for the map container */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    max-width: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Button for directions */
+.get-directions-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.get-directions-btn:hover {
+    background-color: #ff4500;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
+
